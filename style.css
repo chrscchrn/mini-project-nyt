@@ -1,0 +1,123 @@
+html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
+table { border-collapse: collapse; border-spacing: 0; }
+th, td { text-align: left; vertical-align: top; }
+h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
+img { border: 0; }
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    background: rgb(15, 15, 16);
+    color: white;
+    font-family: "Times New Roman", "Avenir Next", Avenir, "Helvetica Neue";
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 6fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    grid-template-areas:
+    ". header header ."
+    ". intro image ."
+    ". form form ."
+    "footer footer footer footer";
+}
+
+.title {
+    grid-area: header;
+    font-size: 6.5rem;
+    font-weight: 700;
+    line-height: 0.8;
+    text-decoration: none;
+}
+
+.intro {
+    grid-area: intro;
+    align-self: end;
+    font-size: 3rem;
+    line-height: 1.4;
+}
+
+.image {
+    grid-area: image;
+    background-color: darkgrey;
+}
+
+.form {
+    grid-area: form;
+}
+
+footer {
+    grid-area: footer;
+    
+    display: grid;
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". p p ."
+}
+
+
+@media only screen and (max-width: 834px) {
+    html {
+        font-size: 14px;
+    }
+    main {
+        grid-template-columns: 1fr 8fr 2fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+
+    html {
+        font-size: 12px;
+    }
+    main {
+        grid-template-columns: 1fr 10fr 0fr 1fr;
+    }
+    /* .timeline-entry {
+        grid-template-columns: 1fr 5fr 5fr 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas:
+        ". hr hr ."
+        ". co co ."
+        ". description description .";
+    } */
+}
+
+/* @media screen and (prefers-color-scheme: light) {
+    body {
+      background-color: white;
+      color: black;
+    }
+  }
+
+
+@media (min-width: 576px) { 
+    body {
+        width: 100%;
+    } 
+}
+
+
+@media (min-width: 768px) { 
+    body {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 992px) { 
+    body {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 1200px) { 
+    body {
+        width: 100%;
+    }
+    
+}  */
